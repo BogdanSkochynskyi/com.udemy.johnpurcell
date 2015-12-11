@@ -3,6 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="person" class="com.udemy.johnpurcell.Person"/>
+    <bean id="person" class="com.udemy.johnpurcell.Person">
+        <constructor-arg index="0" name="id" type="int" value="111"/>
+        <constructor-arg value="Bogdan"/>
+    </bean>
 
 </beans>

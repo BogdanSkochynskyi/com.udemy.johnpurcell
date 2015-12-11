@@ -7,15 +7,12 @@ public class App {
 
     public static void main(String[] args) {
 
-        //Without Spring
-        Person person = new Person();
+
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml"); //must be work in the same way
+        Person person = (Person) context.getBean("person");
         person.speak();
 
-        //With Spring Bean
-//        ApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml"); //must be work in the same way
-        Person person1 = (Person) context.getBean("person");
-        person1.speak();
+        System.out.println(person);
         ((ClassPathXmlApplicationContext)context).close();
 
 
