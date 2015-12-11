@@ -13,7 +13,7 @@ public class App {
 
         //With Spring Bean
 //        ApplicationContext context = new FileSystemXmlApplicationContext("beans.xml");
-        ApplicationContext context = new ClassPathXmlApplicationContext("com\\udemy\\johnpurcell\\beans\\beans.xml"); //must be work in the same way
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml"); //must be work in the same way
         Person person1 = (Person) context.getBean("person");
         person1.speak();
         ((ClassPathXmlApplicationContext)context).close();
