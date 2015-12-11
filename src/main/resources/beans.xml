@@ -6,6 +6,8 @@
     <bean id="person" class="com.udemy.johnpurcell.Person">
         <constructor-arg index="0" name="id" type="int" value="111"/>
         <constructor-arg value="Bogdan"/>
+
+        <property name="taxId" value="55"/>
     </bean>
 
 </beans>
